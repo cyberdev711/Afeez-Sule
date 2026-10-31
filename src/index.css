@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .heading-serif {
+    font-family: var(--font-serif-heading);
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #1f1f1f;
+  }
+
+  .dark .heading-serif {
+    color: #f4f4f5;
+  }
+}
